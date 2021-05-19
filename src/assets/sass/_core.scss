@@ -1,0 +1,83 @@
+
+//-----===== Базовые настройки ====-----//
+
+html{
+  font-size: $font-size-basic;
+  line-height: $line-height-basic;
+}
+
+body {
+  min-width: 320px;
+
+  font-style: $font-style-basic;
+  font-weight: $font-weight-basic;
+  font-family: $font-family-basic;
+
+  color: $white;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+//-----===== Служебные класы - начало ====-----//
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  padding: 0;
+
+  border: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+
+  padding: 0 15px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  @media (max-width: $viewport-xs) {
+    overflow: hidden;
+  }
+
+  @media (min-width: $viewport-sm) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $viewport-md) {
+    max-width: $viewport-md;
+  }
+
+  @media (min-width: $viewport-lg) {
+    max-width: $viewport-lg;
+  }
+
+  @media (min-width: $viewport-xl) {
+    max-width: $viewport-xl;
+  }
+}
+
+//-----===== Служебные класы - конец ====-----//
