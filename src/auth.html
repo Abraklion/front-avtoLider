@@ -1,0 +1,30 @@
+---
+layout: admin
+title: Авторизация
+---
+
+<div class="auth">
+
+  <h1 class="visually-hidden">Авторизация</h1>
+
+  <a class="auth__logo logo" href="index.html" target="_blank">
+    <img class="logo__img" src="assets/img/logo_header.svg" width="210" height="130" alt="Логотип Автолидер">
+  </a><!--/.logo-->
+
+  <form class="auth__form" action="auth.html" method="post">
+    <div class="auth__inner">
+      <label for="name" class="visually-hidden">Имя пользователя</label>
+      <input class="auth__input" id="name" type="text" name="name" placeholder="Имя пользователя">
+    </div>
+    <div class="auth__inner">
+      <label for="password" class="visually-hidden">Имя пользователя</label>
+      <input class="auth__input" id="password" type="text" name="password" placeholder="Пароль">
+    </div>
+    <div class="auth__inner">
+      <button class="auth__button button" type="submit" name="auth-btn">Войти</button>
+    </div>
+  </form>
+
+</div><!--/.auth-->
+
+

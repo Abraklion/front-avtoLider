@@ -1,0 +1,113 @@
+---
+layout: admin
+title: Административная панель
+---
+
+<header class="header-admin">
+  <div class="admin__wrapper">
+
+    <a class="header-admin__logo logo" href="index.html" target="_blank">
+      <img class="logo__img" src="assets/img/logo_header.svg" width="100" height="62" alt="Логотип Автолидер">
+    </a><!--/.logo-->
+
+    <h1 class="header-admin__title">Админ панель</h1>
+
+    <a class="header-admin__logout" href="#">
+      <img class="header-admin__img" src="assets/img/icon_exit.svg" width="62" height="62" alt="">
+    </a>
+
+  </div><!--/.admin__wrapper-->
+</header><!--/.header-admin-->
+
+<main>
+
+  <section class="request">
+    <div class="admin__wrapper">
+
+      <h2 class="request__title">Запрос на консультацию</h2>
+
+      <div class="request__quantity">
+
+        <div class="request__sorting sorting">
+          <p class="sorting__name">Сортировка:</p>
+          <ul class="sorting__list">
+            <li class="sorting__item">
+              <a class="sorting__link" href="">15</a>
+            </li>
+            <li class="sorting__item">
+              <a class="sorting__link" href="">30</a>
+            </li>
+            <li class="sorting__item">
+              <a class="sorting__link" href="">60</a>
+            </li>
+            <li class="sorting__item">
+              <a class="sorting__link" href="">100+</a>
+            </li>
+          </ul>
+        </div><!--/.sorting-->
+
+        <div class="request__sorting sorting">
+          <p class="sorting__name">Архив:</p>
+          <ul class="sorting__list">
+            <li class="sorting__item">
+              <a class="sorting__link" href="">30</a>
+            </li>
+            <li class="sorting__item">
+              <a class="sorting__link" href="">60</a>
+            </li>
+            <li class="sorting__item">
+              <a class="sorting__link" href="">90</a>
+            </li>
+            <li class="sorting__item">
+              <a class="sorting__link" href="">100+</a>
+            </li>
+          </ul>
+        </div><!--/.sorting-->
+
+      </div><!--/.request__quantity-->
+
+      <div class="request__table">
+
+        <table class="request__thead">
+          <tr class="request__row">
+            <td class="request__col">Запрос №</td>
+            <td class="request__col">Телефон</td>
+            <td class="request__col">VIN</td>
+            <td class="request__col">Дата</td>
+            <td class="request__col">Опции</td>
+          </tr>
+        </table><!--/.request__thead-->
+
+        <table class="request__tbody">
+          <tr class="request__row">
+            <td class="request__col">15</td>
+            <td class="request__col">89171486669</td>
+            <td class="request__col">WAUYP64B01N141245</td>
+            <td class="request__col">13.05.2021</td>
+            <td class="request__col">
+              <button class="request__open" type="button">
+                <span class="visually-hidden">Открыть</span>
+              </button>
+              <button class="request__archive" type="button">
+                <span class="visually-hidden">Отправить в архив</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="request__parts-list">
+            <td class="request__col" colspan="5">
+              <div class="request__parts-title">Список нужных запчастей</div>
+              <div class="request__parts-text">Стойка стабилизатора переднего правая, амортизатор передний левый, ступица задняя</div>
+            </td>
+          </tr>
+        </table><!--/.request__tbody-->
+
+      </div><!--/.request__table-->
+
+    </div><!--/.admin__wrapper-->
+  </section><!--/.request-->
+
+</main>
+
+<footer class="footer__admin">
+  <a class="footer__admin-link" href="index.html" target="_blank">На главную</a>
+</footer><!--/.footer__admin-->
