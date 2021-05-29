@@ -52,34 +52,4 @@ img {
   clip: rect(0, 0, 0, 0);
 }
 
-.container {
-  width: 100%;
-  min-width: 320px;
-
-  padding: 0 15px;
-  margin: 0 auto;
-
-  box-sizing: border-box;
-
-  @media (max-width: $viewport-xs) {
-    overflow: hidden;
-  }
-
-  @media (min-width: $viewport-sm) {
-    padding: 0 20px;
-  }
-
-  @media (min-width: $viewport-md) {
-    max-width: $viewport-md;
-  }
-
-  @media (min-width: $viewport-lg) {
-    max-width: $viewport-lg;
-  }
-
-  @media (min-width: $viewport-xl) {
-    max-width: $viewport-xl;
-  }
-}
-
 //-----===== Служебные класы - конец ====-----//
