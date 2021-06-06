@@ -1,3 +1,2 @@
-/*
-*   // = components/nameFile.js
-*/
+
+//= components/menu.js

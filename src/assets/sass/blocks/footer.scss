@@ -1,12 +1,35 @@
 
 .footer{
+  background-color: #262626;
 
+  border-top: 1px solid $black;
+
+  box-shadow:inset 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.footer__inner{
+  padding: 25px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__logo{
+  display: block;
 
+  width: 80px;
+  height: 50px;
 }
 
 .footer__copyright{
+  font-size: 11px;
+  line-height: 15px;
 
+  color: #727171;
+
+  @media (min-width: $viewport-sm) {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }

@@ -1,23 +1,58 @@
+$bgc-instruction: #2B2B2B;
 
 .instruction{
+  padding: 26px 0;
 
+  background-color: $bgc-instruction;
+
+  @media (min-width: $viewport-sm) {
+    padding: 35px 0 25px 0;
+  }
 }
 
 .instruction__description{
-
+  margin-bottom: 10px;
 }
 
 .instruction__list{
+  @include list;
 
+  font-variant: small-caps;
+  font-size: 15px;
+  line-height: 17px;
+
+  @media (min-width: $viewport-sm) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .instruction__item{
+  padding: 15px 0;
+  border-bottom: 1px solid $black;
+
+  @media (min-width: $viewport-sm) {
+    padding: 20px 0;
+  }
+
+  &:last-child{
+    border: none;
+  }
 
   mark{
+    background-color: transparent;
+    color: $first-primary;
+  }
 
+  strong{
+    font-weight: 400;
   }
 
   a{
+    color: white;
 
+    &:hover{
+      text-decoration: none;
+    }
   }
 }

@@ -1,8 +1,12 @@
 
 .logo{
+  display: inline-block;
 
+  text-decoration: none;
 }
 
 .logo_img{
-
+  display: block;
+  width: inherit;
+  height: inherit;
 }

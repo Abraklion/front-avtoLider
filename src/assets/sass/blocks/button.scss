@@ -1,4 +1,61 @@
+$bg-color: #302F2D;
 
 .button{
+  user-select: none;
 
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  padding: 15px 24px;
+
+  background-color: $bg-color;
+
+  border: 1px solid $black;
+  border-radius: 5px;
+
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 17px;
+  font-family: "Arial", sans-serif;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $white;
+
+  cursor: pointer;
+
+  transition: color 0.2s, background-color 0.2s, box-shadow 0.2s, opacity 0.2s;
+
+  &:hover{
+    color: rgba($white, 0.8);
+    background-color: rgba($first-basic, 1);
+  }
+
+  @media (min-width: $viewport-sm) {
+    &--yellow{
+      padding: 11px 22px;
+
+      background-color: $first-primary;
+
+      border: none;
+
+      color: $black;
+
+      opacity: 1;
+
+      &:hover{
+        color: rgba($black, 1);
+        background-color: darken($first-primary, 4%);
+
+        box-shadow: inset 0 0 10px 0 darken($first-primary,40%);
+      }
+
+      &:active{
+        opacity: 0.9;
+      }
+    }
+  }
 }

@@ -1,35 +1,76 @@
 
 .advantages{
+  display: none;
 
+  @media (min-width: $viewport-sm) {
+    display: block;
+
+    padding: 35px 0;
+
+    background: linear-gradient(180deg,rgba(48, 47, 45, 0.4) 3%, rgba(255, 255, 255, 0.15) 50%, rgba(48, 47, 45, 0.4) 93%), #181818;
+  }
 }
 
 .advantages__list{
 
+  @media (min-width: $viewport-sm) {
+    @include list;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .advantages__item{
 
+  @media (min-width: $viewport-sm) {
+    margin-bottom: 40px;
+
+    text-transform: uppercase;
+  }
 }
 
 .advantages__img{
 
-  &--experience{
+  @media (min-width: $viewport-sm) {
+    width: 60px;
+    height: 60px;
 
-  }
+    margin: 0 auto;
 
-  &--quality{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px auto;
 
-  }
+    &--experience{
+      background-image: url(../img/trophy.svg);
+    }
 
-  &--assortment{
+    &--quality{
+      background-image: url(../img/guarantee.svg);
 
-  }
+    }
 
-  &--delivery{
+    &--assortment{
+      background-image: url(../img/product.svg);
+    }
 
+    &--delivery{
+      background-image: url(../img/truck.svg);
+    }
   }
 }
 
 .advantages__title{
 
+  @media (min-width: $viewport-sm) {
+    margin: 23px 0 0 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing:0.3px;
+
+    text-align: center;
+  }
 }

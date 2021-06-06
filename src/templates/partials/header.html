@@ -4,57 +4,63 @@
     <div class="header__inner">
 
       <div class="header__top-panel">
+        <div class="container">
 
-        <button class="header__panel-burger js-burger" type="button">
-          <span class="visually-hidden">Показать меню</span>
-        </button>
+          <div class="header__top-panel-inner">
 
-        <nav class="header__navigation navigation">
-          <div class="navigation__inner">
+            <button class="header__panel-burger js-burger" type="button" aria-controls="navigation" aria-expanded="false">
+              <span class="visually-hidden">Показать меню</span>
+            </button>
 
-            <ul class="navigation__menu">
-              <li class="navigation__menu-item">
-                <a href="#" class="navigation__menu-link">Получить консультацию</a>
+            <ul class="header__panel-list">
+              <li class="header__panel-item">
+                <span class="visually-hidden">Адрес:</span>
+                РБ, г.Ишимбай <br> ул.Советская 75
               </li>
-              <li class="navigation__menu-item">
-                <a href="#" class="navigation__menu-link">Как нас найти</a>
+              <li class="header__panel-item">
+                <span class="visually-hidden">График работы:</span>
+                Пн-Пт: 10:00-19:00 <br> Сб: 10:00-16:00
               </li>
-              <li class="navigation__menu-item">
-                <a href="" class="navigation__menu-link">Как купить</a>
-              </li>
-              <li class="navigation__menu-item">
-                <a href="" class="navigation__menu-link">О нас</a>
+              <li class="header__panel-item">
+                <a href="tel:+79173718952" class="header__panel-link">
+                  <span class="visually-hidden">Телефон:</span>
+                  +7 (917) 371-89-52
+                </a>
               </li>
             </ul>
 
-            <button class="navigation__close js-close" type="button" aria-label="Закрыть меню">
-              <svg class="navigation__close-svg" width="15" height="15" aria-hidden="true">
-                <use xlink:href="assets/img/sprite.svg#cancel_menu"/>
-              </svg>
-              Меню
-            </button>
+          </div><!--/.header__top-panel-inner-->
 
-          </div>
-        </nav><!--/.navigation-->
-
-        <ul class="header__panel-list">
-          <li class="header__panel-item">
-            <span class="visually-hidden">Адрес:</span>
-            РБ, г.Ишимбай <br> ул.Советская 75
-          </li>
-          <li class="header__panel-item">
-            <span class="visually-hidden">График работы:</span>
-            Пн-Пт: 10:00-19:00 <br> Сб: 10:00-16:00
-          </li>
-          <li class="header__panel-item">
-            <a href="tel:+79173718952" class="header__panel-link">
-              <span class="visually-hidden">Телефон:</span>
-              +7 (917) 371-89-52
-            </a>
-          </li>
-        </ul>
-
+        </div><!--/.container-->
       </div><!--/.header__top-panel-->
+
+      <nav class="navigation navigation--hide hide" id="navigation">
+        <div class="navigation__inner">
+
+          <button class="navigation__close js-close" type="button" aria-label="Закрыть меню" aria-expanded="true">
+            <svg class="navigation__close-svg" width="15" height="15" aria-hidden="true">
+              <use xlink:href="assets/img/sprite.svg#cancel_menu"/>
+            </svg>
+            Меню
+          </button>
+
+          <ul class="navigation__menu" role="menu">
+            <li class="navigation__menu-item" role="none">
+              <a href="#consultation" class="navigation__menu-link" role="menuitem">Получить консультацию</a>
+            </li>
+            <li class="navigation__menu-item" role="none" >
+              <a href="#contact" class="navigation__menu-link" role="menuitem">Как нас найти</a>
+            </li>
+            <li class="navigation__menu-item" role="none">
+              <a href="#instruction" class="navigation__menu-link" role="menuitem">Как купить</a>
+            </li>
+            <li class="navigation__menu-item" role="none">
+              <a href="#about" class="navigation__menu-link" role="menuitem">О нас</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav><!--/.navigation-->
 
       <div class="header__info">
 
@@ -63,15 +69,15 @@
         </a><!--/.logo-->
 
         <div class="header__info-inner">
-          <a class="header__info-whatsapp" href="https://wa.me/+79173718952" target="_blank">Whatsapp</a>
+          <a class="header__info-whatsapp" href="https://wa.me/+79173718952" target="_blank">WhatsApp</a>
           <a class="header__info-phone" href="tel:+79173718952">+7 (917) 371-89-52</a>
-          <button class="header__button button" type="button">Получить консультацию</button>
+          <button class="header__button button button--yellow" type="button">Получить консультацию</button>
         </div>
 
       </div><!--/.header__info-->
 
       <div class="header__heading">
-        <h1 class="header__title">Автозапчасти на иномарки <span class="visually-hidden">в городе Ишимбай</span></h1>
+        <h1 class="header__title">Автозапчасти <br> на иномарки <span class="visually-hidden">в городе Ишимбай</span></h1>
         <p class="header__subtitle">в наличии и на заказ <span class="header__subtitle-address">г.Ишимбай, ул.Советская 75</span></p>
       </div><!--/.header__heading-->
 

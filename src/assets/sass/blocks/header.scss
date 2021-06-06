@@ -1,6 +1,43 @@
+$header-info-color: #EFEEEE;
 
 .header{
+  min-height: 560px;
 
+  position: relative;
+
+  padding-top: 110px;
+
+  background-image: url(../img/bg_header-sm.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $viewport-xs) {
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/bg_header-sm@2x.jpg);
+    }
+
+    @media (min-resolution: 3dppx) {
+      background-image: url(../img/bg_header-sm@3x.jpg);
+    }
+  }
+
+  @media (min-width: $viewport-sm) {
+    min-height: 650px;
+
+    padding-top: 124px;
+
+    background-image: url(../img/bg_header-md.jpg);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/bg_header-md@2x.jpg);
+    }
+
+    @media (min-resolution: 3dppx) {
+      background-image: url(../img/bg_header-md@3x.jpg);
+    }
+  }
 }
 
 .header__inner{
@@ -8,11 +45,61 @@
 }
 
 .header__top-panel{
+  width: 100%;
 
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 10;
+
+  box-sizing: border-box;
+
+  background-color: rgba(#000, 0.85);
+
+  transform: translateX(-50%);
+}
+
+.header__top-panel-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 70px;
+
+  @media (min-width: $viewport-sm) {
+    min-height: 74px;
+  }
 }
 
 .header__panel-burger{
+  position: relative;
 
+  width: 35px;
+  height: 21px;
+
+  padding: 0;
+
+  background-color: transparent;
+
+  border: 0;
+
+  cursor: pointer;
+  order: 2;
+
+  &::before{
+    content: "";
+
+    width: 35px;
+    height: 3px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: #FCDB50;
+
+    box-shadow: 0 9px 0 0 #FCDB50, 0 18px 0 0 #FCDB50;
+  }
 }
 
 .header__navigation{
@@ -20,11 +107,42 @@
 }
 
 .header__panel-list{
+  @include list;
 
+  font-size: 13px;
+  line-height: 15px;
+
+  order: 1;
+
+  @media (min-width: $viewport-sm) {
+    display: flex;
+  }
 }
 
 .header__panel-item{
+  padding: 0 0 0 33px;
+  background-position: 0 center;
+  background-repeat: no-repeat;
 
+  &:nth-child(1){
+    background-image: url(../img/item_top_panel.svg);
+  }
+
+  &:nth-child(2){
+    display: none;
+
+    @media (min-width: $viewport-sm) {
+      display: block;
+
+      margin-left: 30px;
+
+      background-image: url(../img/clock.svg);
+    }
+  }
+
+  &:nth-child(3){
+    display: none;
+  }
 }
 
 .header__panel-link{
@@ -36,23 +154,97 @@
 }
 
 .header__logo{
+  display: block;
 
+  width: 180px;
+  height: 112px;
+
+  margin: 0 auto 40px auto;
 }
 
 .header__info-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  width: 100%;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+
+  padding: 28px 0;
+
+  background-color: rgba(#000, 0.6);
+
+  text-align: center;
+
+  @media (min-width: $viewport-sm) {
+    padding: 25px 0;
+  }
 }
 
 .header__info-whatsapp{
+  padding-left: 43px;
+  margin: 0 0 21px 0;
 
+  background-image: url(../img/whatsapp.svg);
+  background-position: 0 center;
+  background-repeat: no-repeat;
+
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+
+  text-decoration: none;
+
+  color: $header-info-color;
+
+  opacity: 1;
+
+  transition: opacity 0.2s;
+
+  &:hover{
+    opacity: 0.8;
+  }
+
+  &:active{
+    opacity: 0.6;
+  }
 }
 
 .header__info-phone{
+  font-size: 25px;
+  line-height: 29px;
 
+  text-decoration: none;
+
+  color: $header-info-color;
+
+  opacity: 1;
+
+  transition: opacity 0.2s;
+
+  &:hover{
+    opacity: 0.8;
+  }
+
+  &:active{
+    opacity: 0.6;
+  }
 }
 
 .header__button{
+  display: none;
 
+  @media (min-width: $viewport-sm) {
+    display: block;
+    width: 283px;
+    height: 42px;
+
+    margin-top: 20px;
+  }
 }
 
 .header__heading{
@@ -60,9 +252,31 @@
 }
 
 .header__title{
+  margin: 0 0 25px 0;
 
+  @include font(700,32px,37px);
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #FCDB50;
+
+  @media (min-width: $viewport-sm) {
+    font-size: 34px;
+    line-height: 39px;
+  }
 }
 
 .header__subtitle{
+  margin: 0;
 
+  @include font(400,18px,21px);
+
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__subtitle-address{
+  display: none;
 }
