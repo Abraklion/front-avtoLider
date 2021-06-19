@@ -16,7 +16,7 @@ module.exports = function () {
         data: 'src/templates/data/'
       }))
       .pipe($.gp.htmlBeautify({
-        "indent_size": 4,
+        "indent_size": 2,
         "max_preserve_newlines": 1
       }))
       .pipe($.gp.if($.config.toggle.fullHtml, $.gp.htmlmin({ collapseWhitespace: true })))

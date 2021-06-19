@@ -1,4 +1,19 @@
 
-.wrapper{
-
+.wrap{
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr;
+  align-content: start;
 }
+
+.wrapper{
+  width: 1200px;
+
+  padding: 0 20px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+

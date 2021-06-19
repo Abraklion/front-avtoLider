@@ -1,20 +1,56 @@
 
 .sorting{
+  display: flex;
 
+  padding: 7px 15px;
+
+  font-size: 14px;
+  line-height: 14px;
+
+  background-color: #4D3D25;
+  background-image: linear-gradient(180deg, rgba(147, 129, 95, 0.324) 0%, rgba(77, 61, 37, 0.342) 100%);
+
+  user-select: none;
 }
 
 .sorting__name{
+  margin: 0 25px 0 0;
 
+  color: #BEBEBE;
 }
 
 .sorting__list{
+  @include list;
 
+  display: flex;
 }
 
 .sorting__item{
+  margin: 0 30px 0 0;
 
+  &:last-child{
+    margin-right: 0;
+  }
 }
 
 .sorting__link{
+  text-decoration: none;
 
+  color: rgba(255, 255, 255, 0.3);
+
+  transition: color 0.2s;
+
+  &:hover{
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &:active{
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &--active{
+    pointer-events: none;
+
+    color: rgba(255, 255, 255, 1);
+  }
 }

@@ -11,6 +11,8 @@ $bgc-navigation: #4D3D25;
 
   transition: background-color 600ms;
 
+  user-select: none;
+
   &.navigation--hide{
     display: none;
   }
@@ -73,6 +75,10 @@ $bgc-navigation: #4D3D25;
   padding-top: 30px;
 
   border-top: 2px solid #C4A106;
+
+  @media (min-width: $viewport-xl) {
+    padding-top: 33px;
+  }
 }
 
 .navigation__menu-item{
@@ -83,6 +89,14 @@ $bgc-navigation: #4D3D25;
 
   &:last-child{
     margin-bottom: 0;
+  }
+
+  @media (min-width: $viewport-xl) {
+    margin-bottom: 35px;
+
+    font-size: 17px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
   }
 }
 
@@ -126,6 +140,11 @@ $bgc-navigation: #4D3D25;
     .navigation__close-svg{
       fill: $first-primary;
     }
+  }
+
+  @media (min-width: $viewport-xl) {
+    margin-bottom: 32px;
+    letter-spacing: 0.3px;
   }
 }
 

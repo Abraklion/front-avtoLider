@@ -6,6 +6,32 @@ $bgc-input: #F8F8F8;
   grid-template-rows: repeat(4, auto);
   grid-gap: 20px;
   align-content: start;
+
+  @media (min-width: $viewport-md) {
+    grid-gap: 25px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    grid-gap: 30px;
+  }
+
+  &--small{
+
+    @media (min-width: $viewport-lg) {
+      grid-gap: 20px;
+
+      padding: 0 20px;
+
+      .form__textarea{
+        height: 160px;
+      }
+
+      .form__consent{
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+  }
 }
 
 .form__input{
@@ -39,6 +65,18 @@ $bgc-input: #F8F8F8;
     text-transform: uppercase;
 
     color: $color-placeholder;
+  }
+
+  &::selection{
+    color: $first-primary;
+    background-color: #5A5A5A;
+  }
+
+  @media (min-width: $viewport-sm) {
+    padding: 16px 20px;
+
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -74,10 +112,28 @@ $bgc-input: #F8F8F8;
 
     color: $color-placeholder;
   }
+
+  &::selection{
+    color: $first-primary;
+    background-color: #5A5A5A;
+  }
+
+  @media (min-width: $viewport-sm) {
+    padding: 18px 20px;
+
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $viewport-md) {
+    height: 200px;
+  }
 }
 
 .form__button{
   margin-top: 5px;
+
+  height: 58px;
 }
 
 .form__consent{
@@ -90,4 +146,16 @@ $bgc-input: #F8F8F8;
   text-transform: lowercase;
 
   color: #A0A0A0;
+
+  user-select: none;
+
+  @media (min-width: $viewport-sm) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $viewport-md) {
+    font-size: 15px;
+    line-height: 17px;
+  }
 }

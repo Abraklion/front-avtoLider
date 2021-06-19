@@ -35,8 +35,22 @@ $bg-color: #302F2D;
   }
 
   @media (min-width: $viewport-sm) {
-    &--yellow{
-      padding: 11px 22px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  @media (min-width: $viewport-md) {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  &--yellow{
+
+    @media (min-width: $viewport-sm) {
+      font-size: 17px;
+      line-height: 17px;
+
+      padding: 12.5px 22px;
 
       background-color: $first-primary;
 
@@ -48,7 +62,7 @@ $bg-color: #302F2D;
 
       &:hover{
         color: rgba($black, 1);
-        background-color: darken($first-primary, 4%);
+        background-color: darken($first-primary, 6%);
 
         box-shadow: inset 0 0 10px 0 darken($first-primary,40%);
       }
@@ -56,6 +70,21 @@ $bg-color: #302F2D;
       &:active{
         opacity: 0.9;
       }
+    }
+
+    @media (min-width: $viewport-lg) {
+      padding: 12px 14px;
+
+      font-size: 15px;
+      line-height: 17px;
+    }
+  }
+
+  &--small{
+
+    @media (min-width: $viewport-lg) {
+      font-size: 18px;
+      line-height: 21px;
     }
   }
 }

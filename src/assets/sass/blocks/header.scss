@@ -38,10 +38,64 @@ $header-info-color: #EFEEEE;
       background-image: url(../img/bg_header-md@3x.jpg);
     }
   }
+
+  @media (min-width: $viewport-md) {
+    min-height: 730px;
+
+    padding-top: 136px;
+
+    background-image: url(../img/bg_header-lg.jpg);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/bg_header-lg@2x.jpg);
+    }
+
+    @media (min-resolution: 3dppx) {
+      background-image: url(../img/bg_header-lg@3x.jpg);
+    }
+  }
+
+  @media (min-width: $viewport-lg) {
+    min-height: 710px;
+
+    padding-top: 193px;
+
+    background-image: url(../img/bg_header-xl.jpg);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/bg_header-xl@2x.jpg);
+    }
+
+    @media (min-resolution: 3dppx) {
+      background-image: url(../img/bg_header-xl@3x.jpg);
+    }
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding-top: 192px;
+
+    background-image: url(../img/bg_header-xxl.jpg);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/bg_header-xxl@2x.jpg);
+    }
+
+    @media (min-resolution: 3dppx) {
+      background-image: url(../img/bg_header-xxl@3x.jpg);
+    }
+  }
 }
 
 .header__inner{
 
+  @media (min-width: $viewport-lg) {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+  }
+
+  @media (min-width: $viewport-xl) {
+    grid-template-columns: 417px 1fr;
+  }
 }
 
 .header__top-panel{
@@ -49,14 +103,13 @@ $header-info-color: #EFEEEE;
 
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 0;
   z-index: 10;
 
   box-sizing: border-box;
 
   background-color: rgba(#000, 0.85);
-
-  transform: translateX(-50%);
+  backdrop-filter: blur(4px);
 }
 
 .header__top-panel-inner{
@@ -68,6 +121,14 @@ $header-info-color: #EFEEEE;
 
   @media (min-width: $viewport-sm) {
     min-height: 74px;
+  }
+
+  @media (min-width: $viewport-md) {
+    min-height: 86px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    min-height: 90px;
   }
 }
 
@@ -100,10 +161,27 @@ $header-info-color: #EFEEEE;
 
     box-shadow: 0 9px 0 0 #FCDB50, 0 18px 0 0 #FCDB50;
   }
-}
 
-.header__navigation{
+  @media (min-width: $viewport-md) {
+    width: 40px;
+    height: 24px;
 
+    order: 1;
+
+    &::before{
+      width: 40px;
+
+      box-shadow: 0 10px 0 0 #FCDB50, 0 20px 0 0 #FCDB50;
+    }
+  }
+
+  @media (min-width: $viewport-lg) {
+    width: 45px;
+
+    &::before{
+      width: 45px;
+    }
+  }
 }
 
 .header__panel-list{
@@ -117,12 +195,53 @@ $header-info-color: #EFEEEE;
   @media (min-width: $viewport-sm) {
     display: flex;
   }
+
+  @media (min-width: $viewport-md) {
+    font-size: 14px;
+    line-height: 16px;
+
+    order: 2;
+  }
+
+  @media (min-width: $viewport-xl) {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+  }
 }
 
 .header__panel-item{
   padding: 0 0 0 33px;
   background-position: 0 center;
   background-repeat: no-repeat;
+
+  &::selection{
+    color: $first-primary;
+    background-color: #5A5A5A;
+  }
+
+  br{
+    &::selection{
+      color: $first-primary;
+      background-color: #5A5A5A;
+    }
+  }
+
+  @media (min-width: $viewport-md) {
+    background-size: 24px auto;
+  }
+
+  @media (min-width: $viewport-lg) {
+    padding-left: 38px;
+
+    background-size: 26px auto;
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding-left: 40px;
+
+    background-size: 28px auto;
+  }
 
   &:nth-child(1){
     background-image: url(../img/item_top_panel.svg);
@@ -138,19 +257,105 @@ $header-info-color: #EFEEEE;
 
       background-image: url(../img/clock.svg);
     }
+
+    @media (min-width: $viewport-xl) {
+      margin-left: 43px;
+    }
   }
 
   &:nth-child(3){
     display: none;
+
+    @media (min-width: $viewport-md) {
+      display: block;
+
+      margin-left: 65px;
+
+      font-size: 22px;
+      line-height: 25px;
+
+      background-image: url(../img/phone-call.svg);
+    }
+
+    @media (min-width: $viewport-lg) {
+      margin-left: 155px;
+
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @media (min-width: $viewport-xl) {
+      margin-left: 219px;
+      padding-left: 46px;
+
+      background-size: 30px auto;
+
+      font-size: 30px;
+      line-height: 34px;
+      letter-spacing: 0;
+    }
   }
 }
 
 .header__panel-link{
+  @media (min-width: $viewport-md) {
+    position: relative;
+    top: 2px;
 
+    vertical-align: middle;
+
+    text-decoration: none;
+
+    color: $white;
+
+    opacity: 1;
+
+    transition: opacity 0.2s;
+
+    &::selection{
+      color: $first-primary;
+      background-color: #5A5A5A;
+    }
+
+    &:hover{
+      opacity: 0.8;
+    }
+
+    &:active{
+      opacity: 0.6;
+    }
+
+    sup{
+      font-size: inherit;
+
+      top: -2px;
+      bottom: auto;
+
+      &::selection{
+        color: $first-primary;
+        background-color: #5A5A5A;
+      }
+    }
+  }
+
+  @media (min-width: $viewport-lg) {
+    position: relative;
+    top: -1px;
+  }
 }
 
 .header__info{
 
+  @media (min-width: $viewport-lg) {
+    padding: 60px 60px 65px 60px;
+
+    background-color: rgba(#000, 0.6);
+    backdrop-filter: blur(2px);
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding-bottom: 60px;
+  }
 }
 
 .header__logo{
@@ -160,6 +365,24 @@ $header-info-color: #EFEEEE;
   height: 112px;
 
   margin: 0 auto 40px auto;
+
+  user-select: none;
+
+  @media (min-width: $viewport-md) {
+    width: 200px;
+    height: 125px;
+
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    width: 210px;
+    height: 130px;
+  }
 }
 
 .header__info-inner{
@@ -183,6 +406,14 @@ $header-info-color: #EFEEEE;
   @media (min-width: $viewport-sm) {
     padding: 25px 0;
   }
+
+  @media (min-width: $viewport-lg) {
+    position: static;
+
+    padding: 0;
+
+    background-color: transparent;
+  }
 }
 
 .header__info-whatsapp{
@@ -205,12 +436,24 @@ $header-info-color: #EFEEEE;
 
   transition: opacity 0.2s;
 
+  user-select: none;
+
   &:hover{
     opacity: 0.8;
   }
 
   &:active{
     opacity: 0.6;
+  }
+
+  @media (min-width: $viewport-lg) {
+    padding-left: 34px;
+    margin-bottom: 15px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    background-size: 24px 24px;
   }
 }
 
@@ -226,12 +469,22 @@ $header-info-color: #EFEEEE;
 
   transition: opacity 0.2s;
 
+  &::selection{
+    color: $first-primary;
+    background-color: #5A5A5A;
+  }
+
   &:hover{
     opacity: 0.8;
   }
 
   &:active{
     opacity: 0.6;
+  }
+
+  @media (min-width: $viewport-lg) {
+    font-size: 18px;
+    line-height: 21px;
   }
 }
 
@@ -245,10 +498,26 @@ $header-info-color: #EFEEEE;
 
     margin-top: 20px;
   }
+
+  @media (min-width: $viewport-lg) {
+    width: 242px;
+    height: 41px;
+  }
 }
 
 .header__heading{
+  user-select: none;
 
+  @media (min-width: $viewport-lg) {
+    padding: 95px 0 0 85px;
+
+    background-color: rgba(16, 16, 16, 0.6);
+    backdrop-filter: blur(2px);
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding: 90px 0 0 125px;
+  }
 }
 
 .header__title{
@@ -265,6 +534,32 @@ $header-info-color: #EFEEEE;
     font-size: 34px;
     line-height: 39px;
   }
+
+  @media (min-width: $viewport-md) {
+    font-size: 42px;
+    line-height: 55px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 30px;
+
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: 0.3px;
+
+    text-align: left;
+  }
+
+  @media (min-width: $viewport-xl) {
+    font-size: 50px;
+    line-height: 65px;
+
+    text-shadow: 1px 1px 2px $black;
+  }
+
+  strong{
+    font-weight: 700;
+  }
 }
 
 .header__subtitle{
@@ -275,8 +570,52 @@ $header-info-color: #EFEEEE;
 
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $viewport-md) {
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    font-size: 24px;
+    line-height: 36px;
+
+    text-align: left;
+  }
+
+  @media (min-width: $viewport-xl) {
+    font-size: 26px;
+    line-height: 39px;
+
+    text-shadow: 1px 1px 2px $black;
+  }
 }
 
 .header__subtitle-address{
   display: none;
+
+  @media (min-width: $viewport-lg) {
+    display: block;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+    text-transform: none;
+
+    user-select: text;
+
+    &::selection{
+      color: $first-primary;
+      background-color: #5A5A5A;
+    }
+  }
+
+  @media (min-width: $viewport-xl) {
+    font-size: 20px;
+    line-height: 29px;
+
+    text-shadow: 1px 1px 2px $black;
+  }
 }

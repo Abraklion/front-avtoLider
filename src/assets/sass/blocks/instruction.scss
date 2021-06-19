@@ -5,8 +5,22 @@ $bgc-instruction: #2B2B2B;
 
   background-color: $bgc-instruction;
 
+  user-select: none;
+
   @media (min-width: $viewport-sm) {
     padding: 35px 0 25px 0;
+  }
+
+  @media (min-width: $viewport-md) {
+    padding: 50px 0 30px 0;
+  }
+
+  @media (min-width: $viewport-lg) {
+    padding: 55px 0 35px 0;
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding: 65px 0 40px 0;
   }
 }
 
@@ -25,6 +39,21 @@ $bgc-instruction: #2B2B2B;
     font-size: 16px;
     line-height: 18px;
   }
+
+  @media (min-width: $viewport-md) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    line-height: 22px;
+    letter-spacing: 0.3px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .instruction__item{
@@ -33,6 +62,18 @@ $bgc-instruction: #2B2B2B;
 
   @media (min-width: $viewport-sm) {
     padding: 20px 0;
+  }
+
+  @media (min-width: $viewport-md) {
+    padding: 25px 0;
+  }
+
+  @media (min-width: $viewport-lg) {
+    padding: 30px 0;
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding: 35px 0;
   }
 
   &:last-child{

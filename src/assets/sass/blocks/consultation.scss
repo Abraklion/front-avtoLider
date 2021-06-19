@@ -8,12 +8,42 @@
   @media (min-width: $viewport-sm) {
     padding: 35px 0;
   }
+
+  @media (min-width: $viewport-md) {
+    padding: 50px 0 55px 0;
+  }
+
+  @media (min-width: $viewport-lg) {
+    padding: 55px 0 65px 0;
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding: 70px 0 75px 0;
+  }
 }
 
 .consultation__description{
   margin: 0 0 30px 0;
+
+  @media (min-width: $viewport-md) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    margin-bottom: 40px;
+  }
 }
 
 .consultation__form{
+
+  @media (min-width: $viewport-lg) {
+    max-width: 715px;
+
+    margin: 0 auto;
+  }
+
+  @media (min-width: $viewport-xl) {
+    max-width: 885px;
+  }
 
 }

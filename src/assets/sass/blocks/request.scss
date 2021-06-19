@@ -1,52 +1,284 @@
 
 .request{
+  padding: 60px 0;
 
+  color: $black;
 }
 
 .request__title{
+  margin: 0;
 
+  border-bottom: 2px solid $black;
+
+  font-size: 18px;
+  line-height: 21px;
+
+  text-transform: uppercase;
+
+  user-select: none;
+
+  span{
+    display: inline-block;
+
+    padding-bottom: 5px;
+
+    border-bottom: 3px solid $black;
+  }
+}
+
+.request__quantity{
+  display: flex;
+  justify-content: flex-end;
+
+  margin: 15px 0;
 }
 
 .request__sorting{
 
+  &:first-child{
+    margin-right: 2px;
+    border-radius: 5px 0 0 5px;
+  }
 }
 
 .request__table{
 
 }
 
-.request__thead{
-
-}
-
 .request__row{
+  display: grid;
+  grid-template-columns: 123px 305px auto 160px 181px;
+  grid-template-rows: minmax(37px,auto) 1fr;
 
+  margin: 0 0 2px 0;
+
+  &--header{
+    grid-template-rows: minmax(38px,auto);
+
+    margin-bottom: 3px;
+    padding: 5px 0;
+
+    background-color: $first-basic;
+    background-image: linear-gradient(180deg,rgba(48, 47, 45, 0.4) 0%, rgba(255, 255, 255, 0.12) 50%, rgba(48, 47, 45, 0.4) 100%);
+
+    .request__col{
+      background-color: transparent;
+
+      border-top: none;
+      border-bottom: none;
+      border-right: 1px solid #BEBEBE;
+
+      line-height: 38px;
+
+      text-transform: none;
+
+      color: #BEBEBE;
+
+      user-select: none;
+
+      &:nth-child(2), &:nth-child(3){
+        user-select: none;
+      }
+
+      &:nth-child(5){
+        text-align: center;
+      }
+
+      &:last-child{
+        border-right: none;
+      }
+    }
+  }
+
+  &--archive{
+
+    .request__col{
+      background-color: darken(#fff, 10%);
+    }
+
+    .request__parts-text{
+      background-color: darken(#fff, 10%);
+    }
+  }
 }
 
 .request__col{
+  background-color: #fff;
 
-}
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+  border-right: 1px solid $black;
 
-.request__tbody{
+  font-size: 18px;
+  line-height: 35px;
 
+  text-transform: uppercase;
+  text-align: center;
+
+  user-select: none;
+
+  &::selection{
+    color: $first-primary;
+    background-color: #5A5A5A;
+  }
+
+  &:nth-child(2), &:nth-child(3){
+    user-select: all;
+  }
+
+  &:nth-child(5){
+    text-align: left;
+  }
+
+  &:first-child{
+    border-left: 1px solid $black;
+  }
+
+  &--active {
+
+    & + .request__parts-list{
+      display: block;
+    }
+
+    .request__open{
+      transform: scaleY(-1);
+    }
+  }
 }
 
 .request__open{
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px;
+  height: 19px;
 
+  line-height: 0;
+
+  padding: 0;
+  margin: 0 51px 0 57px;
+
+  background-color: transparent;
+  background-image: url(../img/icon_down-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: none;
+
+  cursor: pointer;
+
+  transition: transform 0.2s;
 }
 
 .request__archive{
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px;
+  height: 19px;
 
+  margin: 0;
+
+  position: relative;
+
+  border: 2px solid $first-basic;
+
+  line-height: 0;
+
+  opacity: 1;
+
+  transition: opacity 0.2s;
+
+  &::after{
+    content: "";
+
+    width: 10px;
+    height: 4px;
+
+    border-left: 2px solid $first-basic;
+    border-bottom: 2px solid $first-basic;
+
+    position: absolute;
+    left: 3px;
+    bottom: 6px;
+
+    transform: rotate(-45deg);
+
+    opacity: 0;
+
+    transition: opacity 0.2s;
+  }
+
+  &:hover{
+
+    &::after{
+      opacity: 1;
+    }
+  }
+
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.request__delete{
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px;
+  height: 19px;
+
+  line-height: 0;
+
+  opacity: 1;
+
+  transition: opacity 0.2s;
+
+  &:hover{
+    opacity: 0.8;
+  }
+
+  &:active{
+    opacity: 0.6;
+  }
 }
 
 .request__parts-list{
+  display: none;
 
+  grid-column: span 5;
+
+  padding: 11px 28px 9px 123px;
+
+  background-color: rgba(255, 255, 255, 0.39);
+
+
+  border-left: 1px solid $black;
+  border-right: 1px solid $black;
+  border-bottom: 1px solid $black;
 }
 
 .request__parts-title{
+  padding: 8px 0 8px 47px;
 
+  background-color: $first-basic;
+  background-image: linear-gradient(180deg,rgba(48, 47, 45, 0.4) 0%, rgba(255, 255, 255, 0.12) 50%, rgba(48, 47, 45, 0.4) 100%);
+
+  line-height: 18px;
+
+  color: #BEBEBE;
+
+  user-select: none;
 }
 
 .request__parts-text{
+  padding: 15px 48px;
 
+  background-color: $white;
+
+  border-bottom: 1px solid $black;
+  border-left: 1px solid $black;
+  border-right: 1px solid $black;
+
+  &::selection{
+    color: $first-primary;
+    background-color: #5A5A5A;
+  }
 }
