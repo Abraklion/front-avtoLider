@@ -10,11 +10,11 @@
 
     <form class="consultation__form form" action="index.html" method="post" name="consultation">
       <label for="phone" class="visually-hidden">Телефон</label>
-      <input class="form__input" id="phone" type="text" name="phone" maxlength="12" placeholder="Телефон" required>
+      <input class="form__input" id="phone" type="text" name="phone" maxlength="17" placeholder="Телефон" required>
       <label for="vin" class="visually-hidden">Vin номер или frame код</label>
-      <input class="form__input" id="vin" type="text" name="vin" maxlength="17" placeholder="Vin номер или frame код" required>
+      <input class="form__input" id="vin" type="text" name="vin" minlength="5" maxlength="17" placeholder="Vin номер или frame код" required>
       <label for="spares" class="visually-hidden">Список нужных запчастей</label>
-      <textarea class="form__textarea" id="spares" name="spares" maxlength="400" placeholder="Список нужных запчастей" spellcheck required></textarea>
+      <textarea class="form__textarea" id="spares" name="spares" minlength="5" maxlength="1000" placeholder="Список нужных запчастей" spellcheck required></textarea>
       <button class="form__button button" type="submit" name="form-btn">Получить консультацию</button>
       <p class="form__consent">Согласен на обработку персональных данных</p>
     </form><!--/.form-->

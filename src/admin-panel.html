@@ -1,6 +1,7 @@
 ---
 layout: admin
 title: Административная панель
+script: admin.min.js
 ---
 <div class="wrap">
   <header class="header-admin">
@@ -100,11 +101,11 @@ title: Административная панель
             <div class="request__col">89171486669</div>
             <div class="request__col">WAUYP64B01N141245</div>
             <div class="request__col">13.05.2021</div>
-            <div class="request__col request__col--active">
-              <button class="request__open" type="button">
+            <div class="request__col">
+              <button class="request__open" type="button" title="открыть">
                 <span class="visually-hidden">Открыть</span>
               </button>
-              <a href="#" class="request__archive">
+              <a href="#" class="request__archive" title="в архив">
                 <span class="visually-hidden">Отправить в архив</span>
               </a>
             </div>
@@ -114,13 +115,13 @@ title: Административная панель
             </div>
           </div><!--/.request__row-->
 
-          <div class="request__row request__row--archive">
+          <div class="request__row">
             <div class="request__col">15</div>
             <div class="request__col">89171486669</div>
             <div class="request__col">WAUYP64B01N141245</div>
             <div class="request__col">13.05.2021</div>
-            <div class="request__col request__col--active">
-              <button class="request__open" type="button">
+            <div class="request__col">
+              <button class="request__open" type="button" title="открыть">
                 <span class="visually-hidden">Открыть</span>
               </button>
               <a href="#" class="request__delete" title="удалить">
@@ -145,3 +146,4 @@ title: Административная панель
   <footer class="footer-admin"></footer><!--/.footer__admin-->
 </div>
 
+{{> script}}

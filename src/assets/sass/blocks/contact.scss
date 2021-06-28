@@ -2,6 +2,8 @@
 .contact{
   padding: 26px 0;
 
+  overflow-x: hidden;
+
   background-image: linear-gradient(180deg, rgba(48, 47, 45, 0.4) 0%, rgba(77, 61, 37, 0) 100%);
   background-color: #4D3D25;
 
@@ -50,6 +52,7 @@
   border-top: 2px solid $first-primary;
   border-bottom: 2px solid $first-primary;
 
+  cursor: help;
 
   &::before{
     content: "";
@@ -64,6 +67,43 @@
     box-shadow: inset 0 0 15px rgba(77, 61, 37, 0.5);
 
     pointer-events: none;
+  }
+
+  @media (max-width: $viewport-xs) {
+    height: 384px;
+  }
+
+  @media (min-width: $viewport-sm) {
+    height: 384px;
+  }
+
+  @media (min-width: $viewport-lg) {
+    height: 404px;
+  }
+
+  @media (min-width: $viewport-xl) {
+    height: 454px;
+  }
+
+  .mapTitle {
+    display: none;
+
+    position: absolute;
+    z-index: 20;
+
+    padding: 5px 20px;
+
+    background: rgb(255, 255, 255);
+
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+    font-size: 14px;
+
+    color: $black;
+
+    user-select: none;
   }
 }
 
@@ -81,6 +121,10 @@
 
   @media (min-width: $viewport-xl) {
     height: 450px;
+  }
+
+  &--pointer-events{
+    pointer-events: none;
   }
 }
 

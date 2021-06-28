@@ -1,0 +1,62 @@
+
+.error{
+  padding: 5em 0 0 0;
+
+  font-size: 1.125em;
+  letter-spacing: 0.5px;
+
+  text-align: center;
+
+  color: #fff;
+
+  &::selection{
+    color: $first-primary;
+    background-color: #5A5A5A;
+  }
+
+  &::before{
+    content: "";
+
+    display: block;
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 30px auto;
+
+    background-image: url(../img/error.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $viewport-xl) {
+    padding: 6em 0 0 0;
+  }
+
+  &--text{
+    padding: 5px 15px;
+
+    background-color: darken(#DBA1A1, 5%);
+
+    border: 2px solid darken(#F44336, 5%);
+    box-shadow: inset 0 0 3px rgba(#181818, 0.8);
+
+    font-size: 16px;
+    letter-spacing: 0.3px;
+
+    text-align: left;
+
+    color: #181818;
+
+    &::before{
+      content: none;
+    }
+
+    @media (min-width: $viewport-lg) {
+      font-size: 17px;
+    }
+  }
+
+  strong{
+    font-weight: 400;
+  }
+}

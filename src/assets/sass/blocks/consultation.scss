@@ -1,23 +1,33 @@
 
 .consultation{
+  min-height: 584px;
+
   padding: 26px 0;
 
   background-image: linear-gradient(180deg, rgba(48, 47, 45, 0.4) 0%, rgba(77, 61, 37, 0) 100%);
   background-color: #4D3D25;
 
   @media (min-width: $viewport-sm) {
+    min-height: 632px;
+
     padding: 35px 0;
   }
 
   @media (min-width: $viewport-md) {
+    min-height: 742px;
+
     padding: 50px 0 55px 0;
   }
 
   @media (min-width: $viewport-lg) {
+    min-height: 776px;
+
     padding: 55px 0 65px 0;
   }
 
   @media (min-width: $viewport-xl) {
+    min-height: 832px;
+
     padding: 70px 0 75px 0;
   }
 }

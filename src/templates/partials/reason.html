@@ -13,7 +13,7 @@
         <li class="reason__item"><mark>Быстрая доставка.</mark> Возможность поставить нужные для вас <strong>автозапчасти</strong> за несколько часов.</li>
         <li class="reason__item"><mark>Квалифицированные Менеджеры.</mark> У нас работают опытные сотрудники.</li>
         <li class="reason__item"><mark><strong>Автозапчасти в наличии.</strong></mark> За долгие годы работы мы собрали базу самых популярных <strong>запчастей</strong>.</li>
-        <li class="reason__item"><mark><strong>Автозапчасти на заказ.</strong></mark> Оригинальные, аналоги, б/у <strong>запчастей</strong> (с авторазборок). </li>
+        <li class="reason__item"><mark><strong>Автозапчасти на заказ.</strong></mark> Оригинальные, аналоги, б/у <strong>запчастей</strong> (с авто разборок). </li>
         <li class="reason__item"><mark>Гарантия возврата.</mark> 100% возврат если <strong>запчасть</strong> не подошла на ваш автомобиль.</li>
       </ul>
 
@@ -26,11 +26,11 @@
 
         <form class="form form--small" action="index.html" method="post" name="consultation">
           <label for="reason__phone" class="visually-hidden">Телефон</label>
-          <input class="form__input" id="reason__phone" type="text" name="phone" maxlength="12" placeholder="Телефон" required>
+          <input class="form__input" id="reason__phone" type="text" name="phone" maxlength="17" placeholder="Телефон" required>
           <label for="reason__vin" class="visually-hidden">Vin номер или frame код</label>
-          <input class="form__input" id="reason__vin" type="text" name="vin" maxlength="17" placeholder="Vin номер или frame код" required>
+          <input class="form__input" id="reason__vin" type="text" name="vin" minlength="5" maxlength="17" placeholder="Vin номер или frame код" required>
           <label for="reason__spares" class="visually-hidden">Список нужных запчастей</label>
-          <textarea class="form__textarea" id="reason__spares" name="spares" maxlength="400" placeholder="Список нужных запчастей" spellcheck required></textarea>
+          <textarea class="form__textarea" id="reason__spares" name="spares" minlength="5" maxlength="1000" placeholder="Список нужных запчастей" spellcheck required></textarea>
           <button class="form__button button button--small" type="submit" name="form-btn">Получить консультацию</button>
           <p class="form__consent">Согласен на обработку персональных данных</p>
         </form><!--/.form-->

@@ -1,0 +1,57 @@
+.up{
+  display: none;
+}
+
+@media (min-width: $viewport-xl) {
+  .up{
+    position: fixed;
+
+    right: 25px;
+    bottom: 30px;
+
+    animation-name: opacityBtnHide;
+    animation-duration: 0.5s;
+
+    &--active{
+      display: block;
+    }
+
+    &--show{
+      animation-name: opacityBtnShow;
+    }
+
+  }
+
+  .up__button{
+    display: block;
+    width: 55px;
+    height: 55px;
+
+    background-color: darken($first-primary, 4%);
+    background-image: url(../img/up-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 28px;
+
+    border: 2px solid #333333;
+    border-radius: 10px;
+
+    box-shadow: inset 0 0 10px 0 darken($first-primary,30%),0 0 0 1px $first-primary;
+
+    cursor: pointer;
+
+    opacity: 0.4;
+
+    transition: opacity 0.2s, box-shadow 0.2s;
+
+    &:hover{
+      opacity: 0.8;
+    }
+
+    &:active{
+      opacity: 1;
+      box-shadow: inset 0 0 10px 0 darken($first-primary,30%),0 0 0 0 $first-primary;
+    }
+  }
+}
+

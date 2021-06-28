@@ -78,6 +78,13 @@ $bgc-input: #F8F8F8;
     font-size: 18px;
     line-height: 22px;
   }
+
+  &--invalid{
+    background-color: #F9D7D7;
+
+    border: 2px solid #E09595;
+    box-shadow:inset 0 0 0 1px #181818;
+  }
 }
 
 .form__textarea{
@@ -127,6 +134,13 @@ $bgc-input: #F8F8F8;
 
   @media (min-width: $viewport-md) {
     height: 200px;
+  }
+
+  &--invalid{
+    background-color: #F9D7D7;
+
+    border: 2px solid #E09595;
+    box-shadow:inset 0 0 0 1px #181818;
   }
 }
 

@@ -93,11 +93,15 @@
   &--archive{
 
     .request__col{
-      background-color: darken(#fff, 10%);
+      background-color: #E6E7BE;
+    }
+
+    .request__parts-list{
+      background-color: lighten(#E6E7BE,8%);
     }
 
     .request__parts-text{
-      background-color: darken(#fff, 10%);
+      background-color: #E6E7BE;
     }
   }
 }
