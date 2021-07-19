@@ -26,7 +26,7 @@ window.addEventListener("scroll", function (){
 
       setTimeout(function (){
         scrollToHandler.classList.remove("up--active");
-      },500);
+      },400);
     }
   }
 });

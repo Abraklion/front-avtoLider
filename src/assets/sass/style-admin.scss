@@ -17,6 +17,8 @@
 @import "animations";
 
 /* Blocks */
+@import "blocks/error";
+@import "blocks/success";
 @import "blocks/page";
 @import "blocks/wrapper";
 @import "blocks/auth";
@@ -24,7 +26,6 @@
 @import "blocks/header-admin";
 @import "blocks/request";
 @import "blocks/footer-admin";
-@import "blocks/error";
-@import "blocks/success";
+
 
 

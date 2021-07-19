@@ -124,3 +124,11 @@
     margin-bottom: 30px;
   }
 }
+
+.reason__form-inner{
+
+  @media (min-width: $viewport-lg) {
+    padding: 0 20px;
+  }
+
+}

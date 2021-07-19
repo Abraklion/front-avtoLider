@@ -28,12 +28,29 @@
     background-repeat: no-repeat;
   }
 
+  @media (min-width: $viewport-lg) {
+    max-width: 715px;
+    margin: 0 auto;
+  }
+
   @media (min-width: $viewport-xl) {
+    max-width: 885px;
     padding: 6em 0 0 0;
+  }
+
+  &--show{
+    animation-name: opacityBtnShow;
+    animation-duration: 2s;
+  }
+
+  &--hide{
+    animation-name: opacityBtnHide;
+    animation-duration: 2s;
   }
 
   &--text{
     padding: 5px 15px;
+    margin-bottom: 20px;
 
     background-color: darken(#DBA1A1, 5%);
 
@@ -52,6 +69,8 @@
     }
 
     @media (min-width: $viewport-lg) {
+      margin-bottom: 25px;
+
       font-size: 17px;
     }
   }

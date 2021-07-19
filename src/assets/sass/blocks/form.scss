@@ -20,8 +20,6 @@ $bgc-input: #F8F8F8;
     @media (min-width: $viewport-lg) {
       grid-gap: 20px;
 
-      padding: 0 20px;
-
       .form__textarea{
         height: 160px;
       }
@@ -31,6 +29,20 @@ $bgc-input: #F8F8F8;
         line-height: 14px;
       }
     }
+  }
+
+  &--none{
+    display: none;
+  }
+
+  &--hide{
+    animation-name: opacityBtnHide;
+    animation-duration: 1s;
+  }
+
+  &--show{
+    animation-name: opacityBtnShow;
+    animation-duration: 1s;
   }
 }
 

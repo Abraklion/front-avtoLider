@@ -1,3 +1,5 @@
+/* незадействованый */
+
 /* ============ Переменные =============*/
 var formConsultation = document.querySelectorAll(".form");
 
