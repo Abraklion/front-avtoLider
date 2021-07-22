@@ -1,3 +1,3 @@
 
-//= components/confirm.js
 //= components/btn.js
+//= components/ajax_admin.js

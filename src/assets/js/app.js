@@ -6,3 +6,4 @@
 //= components/scrollTop.js
 //= components/scrollLink.js
 //= components/map.js
+//= components/ajax.js
