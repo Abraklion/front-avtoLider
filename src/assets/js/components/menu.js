@@ -36,7 +36,10 @@ function showMenu() {
 
   offInteractive();
 
-  close.focus();
+  if(window.outerWidth > 991){
+    close.focus();
+  }
+
 }
 
 // Скрыть меню
@@ -51,7 +54,10 @@ function hideMenu() {
 
   onInteractive();
 
-  burger.focus();
+  if(window.outerWidth > 991){
+    burger.focus();
+  }
+
 }
 
 // Убираем интерактивные элементы, кроме элементов меню

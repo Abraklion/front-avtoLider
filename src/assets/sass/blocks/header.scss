@@ -162,6 +162,10 @@ $header-info-color: #EFEEEE;
     box-shadow: 0 9px 0 0 #FCDB50, 0 18px 0 0 #FCDB50;
   }
 
+  &:hover, &:focus, &:active{
+    outline-width: 0;
+  }
+
   @media (min-width: $viewport-md) {
     width: 40px;
     height: 24px;
@@ -180,6 +184,10 @@ $header-info-color: #EFEEEE;
 
     &::before{
       width: 45px;
+    }
+
+    &:hover, &:focus, &:active{
+      outline-width: 1px;
     }
   }
 }

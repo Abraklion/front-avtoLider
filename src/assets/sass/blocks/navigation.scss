@@ -137,8 +137,24 @@ $bgc-navigation: #4D3D25;
   cursor: pointer;
 
   &:hover{
+    outline-width: 0;
+
     .navigation__close-svg{
       fill: $first-primary;
+    }
+  }
+
+  &:focus{
+    outline-width: 0;
+  }
+
+  &:active{
+    outline-width: 0;
+  }
+
+  @media (min-width: $viewport-lg) {
+    &:hover,&:focus,&:active{
+      outline-width: 1px;
     }
   }
 
