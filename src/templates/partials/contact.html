@@ -14,22 +14,35 @@
 
     <address class="contact__info">
       <ul class="contact__list">
-        <li class="contact__item">
+        <li class="contact__item" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <mark class="contact__title">Адрес:&nbsp;&nbsp;</mark>
-          РБ, г.Ишимбай ул.Советская 75
+          <span itemprop="addressRegion">РБ</span>, г.<span itemprop="addressLocality">Ишимбай</span> ул.<span itemprop="streetAddress">Советская 75</span>
         </li>
         <li class="contact__item">
           <mark class="contact__title">График работы:&nbsp;&nbsp;</mark>
-          Пн-Пт: 10:00 - 19:00&nbsp;&nbsp;<br>
-          Сб: 10:00 - 16:00
+          <span itemprop="openingHoursSpecification" itemscope itemtype="http://schema.org/OpeningHoursSpecification">
+            <span itemprop="dayOfWeek" itemscope itemtype="http://schema.org/DayOfWeek">
+              <span itemprop="name">Пн-Пт</span>
+            </span>:
+            <span itemprop="opens">10:00</span> -
+            <span itemprop="closes">19:00</span>
+          </span>
+          <br/>
+          <span itemprop="openingHoursSpecification" itemscope itemtype="http://schema.org/OpeningHoursSpecification">
+            <span itemprop="dayOfWeek" itemscope itemtype="http://schema.org/DayOfWeek">
+              <span itemprop="name">Сб</span>
+            </span>:
+            <span itemprop="opens">10:00</span> -
+            <span itemprop="closes">16:00</span>
+          </span>
         </li>
         <li class="contact__item">
           <mark class="contact__title">Телефон:&nbsp;&nbsp;</mark>
-          <a class="contact__link" href="tel:+79173718952">+7 (917) 371-89-52</a>
+          <a class="contact__link" href="tel:+79173718952"><span itemprop="telephone">+7 (917) 371-89-52</span></a>
         </li>
         <li class="contact__item">
           <mark class="contact__title">Почта:&nbsp;&nbsp;</mark>
-          <a class="contact__link" href="mailto:avto_lider@inbox.ru">avto_lider@inbox.ru</a>
+          <a class="contact__link" href="mailto:avto_lider@inbox.ru"><span itemprop="email">avto_lider@inbox.ru</span></a>
         </li>
       </ul>
     </address><!--/.contact__info-->
